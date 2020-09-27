@@ -1,0 +1,58 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "employeeName": "kiran",
+      "address": "valsad",
+      "mobile": 1231234567,
+      "dob": "1996-11-28",
+      "gender": "male",
+      "email": "kiran@gmail.com"
+    },
+    {
+      "id": 2,
+      "employeeName": "tejas",
+      "address": "vapi",
+      "mobile": 6565653432,
+      "dob": "1991-07-16",
+      "gender": "male",
+      "email": "tejas@gmail.com"
+    },
+    {
+      "id": 3,
+      "employeeName": "jennifer",
+      "address": "washington",
+      "mobile": 3344343455,
+      "dob": "1995-09-01",
+      "gender": "female",
+      "email": "jennifer@gmail.com"
+    },
+    {
+      "employeeName": "manoj",
+      "address": "dungri",
+      "mobile": "8889889888",
+      "dob": "1990-11-09",
+      "gender": "male",
+      "email": "manoj@gmail.com",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "employeeName": "pinal",
+      "address": "valsad",
+      "mobile": "2343324344",
+      "dob": "1995-12-06",
+      "gender": "female",
+      "email": "pinal@gmail.com"
+    },
+    {
+      "id": 6,
+      "employeeName": "riya",
+      "address": "surat",
+      "mobile": "8795432122",
+      "dob": "1990-09-23",
+      "gender": "female",
+      "email": "riya@gmail.com"
+    }
+  ]
+}

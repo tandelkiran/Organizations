@@ -1,0 +1,8 @@
+<employee-list-presentation 
+[employeeList]="employeeList$ | async"
+[getEmployee]="getEmployee$ | async"
+(addEmployee)="addEmployee($event)"
+(updateEmployee)="updateEmployee($event)"
+(sendId)="getSingleEmployee($event)"
+(employeeId)="removeEmployee($event)"
+></employee-list-presentation>

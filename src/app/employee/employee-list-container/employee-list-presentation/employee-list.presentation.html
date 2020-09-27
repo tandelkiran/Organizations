@@ -1,0 +1,68 @@
+<div class="container m-0">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary mt-3 ml-5 mb-3" (click)="loadEmployeeForm(null)">Add Employee</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 ml-5">
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr class="bg-dark">
+            <th scope="col">Id</th>
+            <th class="table-row-heading border-0 cursor-pointer" scope="col" (click)="sorting('employeeName')">
+              <span class="mr-2">Name</span>
+              <span *ngIf="fieldName == 'employeeName'">
+                <span *ngIf="reverse" class="fa fa-caret-up text-warning sort-desc bg-transparent"></span>
+                <span *ngIf="!reverse" class="fa fa-caret-down text-warning sort-asc bg-transparent"></span>
+              </span>
+            </th>
+            <th class="table-row-heading border-0 cursor-pointer" scope="col" (click)="sorting('address')">
+              <span class="mr-2">Address</span>
+              <span *ngIf="fieldName == 'address'">
+                <span *ngIf="reverse" class="fa fa-caret-up text-warning"></span>
+                <span *ngIf="!reverse" class="fa fa-caret-down text-warning"></span>
+              </span>
+            </th>
+            <th class="table-row-heading border-0 cursor-pointer" scope="col" (click)="sorting('mobile')">
+              <span class="mr-2">Mobile</span>
+              <span *ngIf="fieldName == 'mobile'">
+                <span *ngIf="reverse" class="fa fa-caret-up text-warning"></span>
+                <span *ngIf="!reverse" class="fa fa-caret-down text-warning"></span>
+              </span>
+            </th>
+            <th scope="col">DOB</th>
+            <th scope="col">Gender</th>
+            <th class="table-row-heading border-0 cursor-pointer" scope="col" (click)="sorting('email')">
+              <span class="mr-2">Email</span>
+              <span *ngIf="fieldName == 'email'">
+                <span *ngIf="reverse" class="fa fa-caret-up text-warning"></span>
+                <span *ngIf="!reverse" class="fa fa-caret-down text-warning"></span>
+              </span>
+            </th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of filteredEmployeeList | order : fieldName : reverse">
+            <th scope="row">{{employee.id}}</th>
+            <td>{{employee.employeeName}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.mobile}}</td>
+            <td>{{employee.dob}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.email}}</td>
+            <td>
+              <span><i class="fa fa-pencil text-success pr-2" style="cursor: pointer;"
+                  (click)="getEmployeeById(employee.id)"></i></span>
+              <span><i class="fa fa-trash text-danger" style="cursor: pointer;"
+                  (click)="removeEmployee(employee.id)"></i></span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      data:- {{employee | json}}
+    </div>
+  </div>
+</div>
